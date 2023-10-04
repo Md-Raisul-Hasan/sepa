@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.submit {
+    padding: 10px;
+}
+
+.text-box-area {
+    position: relative;
+    height: 15cm;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(10%);
+}
+
+#textInput {
+    width: 100%;
+    height: 15cm;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#commentInput {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-badge {
+    display: inline-block;
+    position: absolute;
+    z-index: 15;
+    cursor: pointer;
+
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.annotation-area {
+    width: 30%;
+    margin-right: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 20cm;
+    transform: translateY(10%);
+}
+
+.functions button,
+.sub-skill-button {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 0.75em;
+    position: absolute;
+    z-index: 10;
+    transform: translateY(-100%);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.badge-next-to-button {
+    margin-left: 5px;
+    cursor: pointer;
+    position: static;
+    transform: none;
+    pointer-events: auto;
+}
+
+.loginpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.login-container {
+    position: relative;
+    border-radius: 20px;
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.green-stripe {
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 100%;
+    background-color: #54C669;
+}
+
+.green-stripe img {
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+}
+
+.login-container input[type="submit"] {
+    background-color: #54C669;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #54C669;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 100%;
+    background-color: #54C669;
+}
+
+.header_bar img {
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 20px;
+}
+
+.G_button {
+    background-color: #54C669;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+form + button {
+    display: block;
+    margin: 10px auto; /* Adjusts the top/bottom margin and auto sets left/right margin to auto for centering */
+}

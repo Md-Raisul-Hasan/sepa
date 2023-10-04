@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body class = "loginpage">
+<div class="login-container">
+    <div class="green-stripe">
+        <img src="images/scriibi.png" alt="Logo">
+    </div>
+    <form action="login_process.php" method="post">
+        <label for="username">ID</label>
+        <input type="text" id="username" name="username" placeholder="eg:1234567" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Your password" required>
+        <input class = "G_button" type="submit" value="LOG IN">
+    </form>
+<!--create new account-->
+<form id="newAccountForm" action="login_process.php" method="post" style="display: none;">
+    <input type="hidden" name="action" value="create"> <!-- Add this line -->
+    <label>Teacher ID: </label><input name="teacher_id" type="text" required><br>
+    <label>Teacher Password: </label><input name="teacher_password" type="password" required><br>
+    <input type="submit" id="createButton" value="Create">
+</form>
+<button type="button" id="newAccountButton">Create New Account</button>
+<script>
+    document.getElementById('newAccountButton').onclick = function() {
+        var newAccountForm = document.getElementById('newAccountForm');
+        var loginForm = document.querySelector('.login-container form'); // Select the login form
+        if (newAccountForm.style.display === 'block') {
+            newAccountForm.style.display = 'none';
+            loginForm.style.display = 'block'; // Show the login form
+        } else {
+            newAccountForm.style.display = 'block';
+            loginForm.style.display = 'none'; // Hide the login form
+        }
+    };
+</script>
+
+
+
+
+</body>
+</html>

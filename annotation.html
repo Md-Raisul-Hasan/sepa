@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annotation and Marking App</title>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- where user annotates -->
+    <div class="header_bar">
+        <img src="images/scriibi.png" alt="Logo">
+    </div>
+    <div class="container">
+        <div class="text-box-area">
+            <form id="text-box-area" action="submit_process.php" method="post"> <!-- Change php file name pls -->
+                <div id="textInput"></div>
+                <textarea style="display: none;" id="annotatedtext" name="annotatedtext"></textarea>
+                <div class="submit">
+                    <button class = "G_button" type="submit" onclick="updateTextArea()">Submit Annotation</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="annotation-area">
+            <div class="functions">
+                <!-- Multiple selection toggle -->
+                <div class="multiple-selection">
+                    <label for="multipleSelectToggle">Multiple Selection:</label>
+                    <input type="checkbox" id="multipleSelectToggle">
+                </div>
+                </form>
+                <div class="sub-skills">
+                    <label>Final Level mark: </label><input name="Level" type="text" required><br>
+                    <br>
+                    <label> Studnet ID: </label><input name="studid" type="text" required><br>
+                    <br>
+                    <label>Skils</label>
+                    <button onclick="showGrading('Sentence Beginnings')" data-subskill="Sentence Beginnings">Sentence
+                        Beginnings</button>
+                    <br>
+                    <label>Sub-Skils</label>
+                    <button onclick="showGrading('Propositional Phrase')"
+                        data-subskill="Propositional Phrase">Propositional Phrase</button>
+                    <button onclick="showGrading('Transition')" data-subskill="Transition">Transition</button>
+                    <button onclick="showGrading('Proper Noun')" data-subskill="Proper Noun">Proper Noun</button>
+                    <button onclick="showGrading('Sub Conjunction')" data-subskill="Sub Conjunction">Sub
+                        Conjunction</button>
+                    <button onclick="showGrading('Pronoun')" data-subskill="Pronoun">Pronoun</button>
+                    <br>
+                    <label>Erase</label>
+                    <button onclick="clearSubSkillFormatting()">Clear Selected Sub-Skill Formatting</button>
+                    <button onclick="clearAllSubSkillFormatting()">Clear All Sub-Skill Formatting</button>
+                </div>
+
+                <div id="commentSection" style="display:none;">
+                    <textarea id="commentInput" placeholder="Add your comment here..."></textarea>
+                    <button onclick="addComment()">Add Comment</button>
+                </div>
+
+                <div id="grading" style="display:none;">
+                    Level:
+                    <select id="gradeValue">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button onclick="confirmGrade()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
